@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.venvPath": ".venv",
+		"python.pythonPath": "venv/bin/python3.7"
+	}
+}
