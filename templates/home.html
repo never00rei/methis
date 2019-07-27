@@ -1,6 +1,12 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}This is an example page{% endblock %}
 
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('static', filename='css/enigma_theme.css')}}">
+{% endblock %}
+
 {% block navbar %}
 <div class="navbar navbar-fixed-top">
   <!-- ... -->
@@ -8,5 +14,17 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Hello, Bootstrap</h1>
+
+<div class="container">
+  <div class="h-100 row">
+    <div class="col-sm">
+      <div class="card mx-auto" style="width: 25rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{ checksum }}</h5>
+            <p class="card-text">{{ payload }}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
